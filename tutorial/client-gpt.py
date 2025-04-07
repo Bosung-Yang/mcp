@@ -12,8 +12,7 @@ from langchain_openai import ChatOpenAI
 from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 import os
-os.environ['OPENAI_API_KEY'] = 'Your OpenAI Key'
-
+os.environ['OPENAI_API_KEY'] = 'Your OpenAI API Key'
 load_dotenv()  # load environment variables from .env
 
 class MCPClient:
@@ -109,3 +108,4 @@ class MCPClient:
                 final_text.append(response.content[0].text)
 
         return "\n".join(final_text)
+
